@@ -1,0 +1,26 @@
+/*-------------------------------------------The starting*/
+#start_game{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 40vh;
+}
+
+/*-------------------------------------------Game*/
+#game{
+    display: none;
+}
+img {
+    width: 100%;
+    height: auto;
+    display:none;
+    
+}
+
+#btn{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
