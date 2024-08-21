@@ -2,7 +2,7 @@ let startGame = document.getElementById("start_game");
 let starts = document.getElementById("start");
 let games = document.getElementById("game");
 let image = document.getElementById('img');
-let inputs = document.getElementById('input');
+
 let helps = document.getElementById('help');
 let nexts = document.getElementById('next');
 
@@ -22,14 +22,14 @@ function startTheGame(){
 
     //to hide the start panel and diplay the game
     startGame.style.display='none';
-    games.style.display='block';
-    image.style.display='block';
 
     /*To prevent the user to refresh the page 
     without knowing that the data will be lost*/
     window.onbeforeunload = function() {
         return "You may lose your data, are you sure?";
     };
+    games.style.display='block';
+    image.style.display='block';
 }
 
 /*The help button where it displays first letter to the user*/
@@ -51,9 +51,6 @@ function nextImage(){
 }
 
 function inputCorrect(){
-    if(input == "afghanistan" & nextImage() == 1&2&3){
-        return alert('TRUE')
-    }else{
-        return alert("Not true")
-    }
+    const inputs = document.getElementById('input').value;
+    console.log(inputs)
 }
