@@ -6,12 +6,45 @@ let image = document.getElementById('img');
 let helps = document.getElementById('help');
 let nexts = document.getElementById('next');
 
+let randomImage = 0; // To keep track of the current image
+
+// Array of image filenames in your assets folder
+const imageFilenames = [
+    'afghanistan.jpg',
+    'afghanistan1.jpg',
+    'afghanistan2.jpg',
+    'albania.jpg',
+    'albania1.jpg',
+    'algeria.jpg',
+    'algeria1.jpg',
+    'algeria2.jpg',
+    'algeria3.jpg',
+    'argentina.jpg',
+    'argentina1.webp',
+    'argentina2.jpg',
+    'armenia.jpg',
+    'armenia1.jpg',
+    'armenia2.jpg',
+    'armenia3.jpg',
+    'armenia4.jpg',
+    'australia.jpg',
+    'australia1.jpg',
+    'australia2.jpeg',
+    'australia3.jpg',
+    'australia4.webp',
+    'austria1.jpg',
+    'austria2.jpg',
+
+    // Add all the image filenames here
+];
 
 game()
 
 /*The game*/
 function game(){
     starts.addEventListener('click', startTheGame);
+    randomImage = Math.floor(Math.random() * imageFilenames.length) + 1; // Generate a random number between 1 and 261
+    image.src = `assets/images/${imageFilenames[randomImage]}`; // Update the image source to a new random image
     firstLetter()
     nextImage()
     inputCorrect()
@@ -33,20 +66,19 @@ function startTheGame(){
 }
 
 /*The help button where it displays first letter to the user*/
-function firstLetter(){
-    const src = image.src;
-    const file = src.substring(src.lastIndexOf('/') + 1); // Extract file name
-    const letter = file.charAt().toUpperCase(); // Get the first letter
-    helps.addEventListener('click', function(){
-        M.toast({html: `The first letter is ${letter}`})
+function firstLetter() {
+    helps.addEventListener('click', function() {
+        const filename = imageFilenames[randomImage];
+        const letter = filename.charAt(0).toUpperCase(); // Get the first letter of the current image filename
+        M.toast({html: `The first letter is ${letter}`});
     });
 }
 
 /* For the next image */
 function nextImage(){
     nexts.addEventListener('click', function(){
-        let randomImage = Math.floor(Math.random() * 261) + 1; // Generate a random number between 1 and 261
-        image.src = `assets/images/${randomImage}.jpg`; // Update the image source to a new random image
+        randomImage = Math.floor(Math.random() * imageFilenames.length) + 1; // Generate a random number between 1 and 261
+        image.src = `assets/images/${imageFilenames[randomImage]}`; // Update the image source to a new random image
     });
 }
 
