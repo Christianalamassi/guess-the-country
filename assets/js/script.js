@@ -10,18 +10,25 @@ let randomImage = 0; // To keep track of the current image
 
 // Array of image filenames in your assets folder
 const imageFilenames = [
-    'afghanistan.jpg', 'afghanistan1.jpg', 'afghanistan2.jpg', 'albania.jpg', 'albania1.jpg',
-    'algeria.jpg', 'algeria1.jpg', 'algeria2.jpg','algeria3.jpg', 'argentina.jpg', 'argentina1.webp',
-    'argentina2.jpg', 'armenia.jpg', 'armenia1.jpg', 'armenia2.jpg', 'armenia3.jpg', 'armenia4.jpg',
+    'afghanistan.jpg', 'afghanistan1.jpg','afghanistan2.jpg', 'albania.jpg','albania1.jpg',
+    'algeria.jpg', 'algeria1.jpg', 'algeria2.jpg','algeria3.jpg', 'argentina.jpg','argentina1.webp',
+    'argentina2.jpg', 'armenia.jpg', 'armenia1.jpg', 'armenia2.jpg', 'armenia3.jpg','armenia4.jpg',
     'australia.jpg', 'australia1.jpg', 'australia2.jpeg', 'australia3.jpg', 'australia4.webp',
-    'austria1.jpg', 'austria2.jpg', 'belgium.webp', 'belgium1.webp', 'brazil.jpeg', 'brazil1.jpg',
-    'brazil2.jpg', 'brazil3.jpg', 'bulgaria.webp', 'bulgaria1.jpeg', 'bulgaria2.jpg', 'canada.jpg',
-    'canada1.jpeg', 'canada2.jpeg', 'canada3.jpg', 'canada4.jpg', 'chad.jpg', 'chad1.jpg', 'chad2.jpg',
+    'austria1.jpg', 'austria2.jpg', 'belgium.webp', 'belgium1.webp', 'brazil.jpeg','brazil1.jpg',
+    'brazil2.jpg', 'brazil3.jpg', 'bulgaria.webp', 'bulgaria1.jpeg', 'bulgaria2.jpg','canada.jpg',
+    'canada1.jpeg', 'canada2.jpeg', 'canada3.jpg', 'canada4.jpg', 'chad.jpg', 'chad1.jpg','chad2.jpg',
     'chile.jpg', 'chile1.jpg', 'chile2.jpg', 'china.jpg', 'china0.jpg', 'china1.jpg', 'china2.jpeg',
-    'china3.jpg', 'china4.jpg', 'china5.jpg', 'colombia.jpg', 'colombia1.jpg', 'congo.jpg',
+    'china3.jpg', 'china4.jpg', 'china5.jpg', 'colombia.jpg', 'colombia1.jpg','congo.jpg',
     'congo1.jpeg', 'congo2.jpeg','croatia.jpg', 'croatia1.jpg', 'croatia2.jpg','cuba.jpeg',
     'cuba1.jpeg', 'cuba2.jpeg', 'cuba3.jpg', 'cyprus1.jpeg', 'cyprus2.jpeg', 'cyprus3.jpg',
-
+    'denmark.jpeg', 'denmark1.jpg', 'denmark2.webp','ecuador.jpg','ecuador1.jpg','egypt.jpg',
+    'egypt1.webp', 'egypt2.png', 'egypt3.png', 'egypt4.jpg','england.jpg','england1.jpg','england2.jpg',
+    'england3.png','england4.jpg','finland.jpeg','finland1.jpeg','finland2.jpeg', 'france.jpg',
+    'france1.jpg','france3.jpeg','france4.jpeg','georgia.jpg','germany.jpeg','germany1.jpeg',
+    'germany2.jpeg','ghana.jpg', 'greece.jpg', 'greece1.jpg', 'greece2.webp', 'greece3.webp',
+    'greenland.jpg', 'greenland1.jpeg','hungary.jpg','iceland.jpg','iceland1.webp','iceland2.webp',
+    'india.jpg','india1.jpg','india2.jpg','ireland1.jpeg','ireland2.jpg','ireland3.jpeg',
+    'ireland4.jpeg',
     // Add all the image filenames here
 ];
 
@@ -32,9 +39,9 @@ function game(){
     starts.addEventListener('click', startTheGame);
     randomImage = Math.floor(Math.random() * imageFilenames.length) + 1; // Generate a random number between 1 and 261
     image.src = `assets/images/${imageFilenames[randomImage]}`; // Update the image source to a new random image
+    inputCorrect()
     firstLetter()
     nextImage()
-    inputCorrect()
 }
 
 /*To start the game*/
