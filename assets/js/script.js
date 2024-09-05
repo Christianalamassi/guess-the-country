@@ -4,6 +4,7 @@ let games = document.getElementById("game");
 let image = document.getElementById('img');
 let inputs = document.getElementById('input')
 let helps = document.getElementById('help');
+let uncovers = document.getElementById('uncover');
 let nexts = document.getElementById('next');
 
 let randomImage = 0; // To keep track of the current image
@@ -44,7 +45,16 @@ const imageFilenames = [
     'poland1.jpg','portugal0.jpg','portugal1.jpg','portugal2.webp','portugal3.webp','puerto rico0.jpg','puerto rico1.jpg',
     'puerto rico2.jpg','puerto rico3.jpg','romania0.jpeg','russia0.webp','russia1.jpg','serbia0.jpeg',
     'serbia1.jpeg','serbia2.jpeg','serbia0.jpeg','serbia1.jpg','serbia2.jpeg','slovakia0.jpeg','slovakia1.jpg',
-    'slovakia2.jpeg',
+    'slovakia2.jpeg','south africa0.jpg','south africa1.jpg','south africa2.jpg','south africa3.jpg','south africa4.jpg',
+    'south korea0.jpg','south korea1.jpg','south korea2.jpg','south korea3.jpg','spain0.jpg','spain1.jpg',
+    'spain3.jpg','sudan0.jpg','sudan1.jpeg','sweden0.webp','sweden1.webp','sweden2.webp',
+    'sweden3.jpg','switzerland0.jpg','switzerland1.webp','switzerland2.webp','syria0.jpg','taiwan0.webp',
+    'taiwan1.jpg','thailand0.jpeg','thailand1.jpeg','thailand2.webp','thailand3.jpg','turkey0.jpg',
+    'ukraine0.jpeg','ukraine1.jpeg','united arab emirates0.jpg','united arab emirates1.jpg',
+    'united arab emirates2.jpg','usa0.jpg','usa1.jpg','usa2.jpg','usa3.jpg','usa4.jpeg','usa5.jpg','usa6.jpg',
+    'uzbekistan0.jpg','venezuela0.jpg','venezuela1.jpeg','venezuela2.jpg','venezuela3.jpeg',
+    'venezuela4.jpg','vietnam0.jpg','vietnam1.jpg','vietnam2.jpg','zambia0.jpg','zimbabwe0.jpg',
+    'zimbabwe1.jpg'
     // Add all the image filenames here
 ];
 
@@ -57,6 +67,7 @@ function game(){
     image.src = `assets/images/${imageFilenames[randomImage]}`; // Update the image source to a new random image
     firstLetter()
     nextImage()
+    nameOfCountry()
     inputCorrect()
 }
 
@@ -84,6 +95,16 @@ function firstLetter() {
     });
 }
 
+/*The help button where it displays first letter to the user*/
+function nameOfCountry(){
+    uncovers.addEventListener('click', function(){
+        // Get the image name without extension
+    const filename = imageFilenames[randomImage].replace(/\d+(\.\w+)$/, '').toUpperCase();
+    M.toast({html:`${filename}`})
+    console.log(filename)
+    });
+}
+
 /* For the next image */
 function nextImage(){
     nexts.addEventListener('click', function(){
@@ -97,7 +118,7 @@ function nextImage(){
 function inputCorrect(){
     inputs.addEventListener('input',function(){
         // Get the image name without extension
-        const filename = imageFilenames[randomImage].replace(/\d+(\.\w+)$/, '').toLowerCase();;
+        const filename = imageFilenames[randomImage].replace(/\d+(\.\w+)$/, '').toLowerCase();
         // Get the user input, trim spaces, and make lowercase
         const userInput = inputs.value.trim().toLowerCase();
 
