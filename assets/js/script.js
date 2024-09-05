@@ -2,7 +2,7 @@ let startGame = document.getElementById("start_game");
 let starts = document.getElementById("start");
 let games = document.getElementById("game");
 let image = document.getElementById('img');
-
+let inputs = document.getElementById('input')
 let helps = document.getElementById('help');
 let nexts = document.getElementById('next');
 
@@ -34,7 +34,17 @@ const imageFilenames = [
     'kazakhstan2.jpeg','kazakhstan3.jpg','kazakhstan4.jpg','libya0.jpg','libya1.jpg','libya2.jpg',
     'libya3.jpg','lithuania0.jpg','lithuania1.jpg','luxembourg0.jpg','madagascar0.jpg','madagascar1.webp',
     'malawi0.jpg','malawi1.jpg','malta0.webp','malta1.webp','mexico0.jpg','mexico0.jpg','mexico1.jpeg','mexico2.jpeg',
-    'mexico3.jpg','burma0.jpg','burma1.jpg','moldova0.jpg','moldova1.jpg','moldova2.jpg',
+    'mexico3.jpg','burma0.jpg','burma1.jpg','moldova0.jpg','moldova1.jpg','moldova2.jpg','mongolia0.jpeg',
+    'mongolia1.webp','mongolia2.jpeg','mongolia3.jpeg','montenegro0.jpg','montenegro1.jpg','montenegro2.jpg',
+    'morocco0.jpg','morocco1.jpg','morocco2.jpeg','mozambique0.jpg','mozambique1.jpg','mozambique2.jpg',
+    'namibia0.jpg','namibia1.jpg','natherland0.jpg','natherland1.jpeg','natherland2.jpeg','new zealand0.jpg',
+    'new zealand1.jpg','niger0.jpg','north korea0.jpg','north korea1.jpg','north korea2.jpg',
+    'north korea3.jpg','norway0.jpg','norway1.jpg','norway2.jpeg','norway3.jpg','pakistan0.jpg','paraguay0.jpg',
+    'paraguay1.jpg','philippines0.jpeg','philippines1.jpeg','philippines2.jpg','philippines3.jpg','poland0.jpg',
+    'poland1.jpg','portugal0.jpg','portugal1.jpg','portugal2.webp','portugal3.webp','puerto rico0.jpg','puerto rico1.jpg',
+    'puerto rico2.jpg','puerto rico3.jpg','romania0.jpeg','russia0.webp','russia1.jpg','serbia0.jpeg',
+    'serbia1.jpeg','serbia2.jpeg','serbia0.jpeg','serbia1.jpg','serbia2.jpeg','slovakia0.jpeg','slovakia1.jpg',
+    'slovakia2.jpeg',
     // Add all the image filenames here
 ];
 
@@ -79,13 +89,23 @@ function nextImage(){
     nexts.addEventListener('click', function(){
         randomImage = Math.floor(Math.random() * imageFilenames.length) + 1; // Generate a random number between 1 and 261
         image.src = `assets/images/${imageFilenames[randomImage]}`; // Update the image source to a new random image
+        inputs.value = ''; // Clear input field when a new image is displayed
+        inputs.style.color = ''; // Reset the color of the input
     });
 }
 
 function inputCorrect(){
-    const inputs = document.getElementById('input');
+    inputs.addEventListener('input',function(){
+        // Get the image name without extension
+        const filename = imageFilenames[randomImage].replace(/\d+(\.\w+)$/, '').toLowerCase();;
+        // Get the user input, trim spaces, and make lowercase
+        const userInput = inputs.value.trim().toLowerCase();
 
-        // inputs.style.color="#3ec408";
-        // inputs.style.color="#e1531a";  
-        
+        if(userInput == filename){
+            inputs.style.color="#3ec408";
+            console.log(filename)
+        }else{
+            inputs.style.color="#e1531a";
+        } 
+    });    
 }

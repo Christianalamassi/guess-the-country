@@ -32,6 +32,11 @@ img {
     padding-bottom: 10px;
 }
 
+#uncover{
+    margin-left:20px;
+    background-color: brown;
+}
+
 #input{
     width: 30%;
     padding-left: 10px;
