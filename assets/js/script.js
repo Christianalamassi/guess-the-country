@@ -1,8 +1,10 @@
+/*jshint esversion: 6*/
+
 let startGame = document.getElementById("start_game");
 let starts = document.getElementById("start");
 let games = document.getElementById("game");
 let image = document.getElementById('img');
-let inputs = document.getElementById('input')
+let inputs = document.getElementById('input');
 let helps = document.getElementById('help');
 let uncovers = document.getElementById('uncover');
 let nexts = document.getElementById('next');
@@ -58,17 +60,17 @@ const imageFilenames = [
     // Add all the image filenames here
 ];
 
-game()
+game();
 
 /*The game*/
 function game(){
     starts.addEventListener('click', startTheGame);
     randomImage = Math.floor(Math.random() * imageFilenames.length) + 1; // Generate a random number between 1 and 261
     image.src = `assets/images/${imageFilenames[randomImage]}`; // Update the image source to a new random image
-    firstLetter()
-    nextImage()
-    nameOfCountry()
-    inputCorrect()
+    firstLetter();
+    nextImage();
+    nameOfCountry();
+    inputCorrect();
 }
 
 /*To start the game*/
@@ -100,8 +102,7 @@ function nameOfCountry(){
     uncovers.addEventListener('click', function(){
         // Get the image name without extension
     const filename = imageFilenames[randomImage].replace(/\d+(\.\w+)$/, '').toUpperCase();
-    M.toast({html:`${filename}`})
-    console.log(filename)
+    M.toast({html:`${filename}`});
     });
 }
 
@@ -124,7 +125,6 @@ function inputCorrect(){
 
         if(userInput == filename){
             inputs.style.color="#3ec408";
-            console.log(filename)
         }else{
             inputs.style.color="#e1531a";
         } 

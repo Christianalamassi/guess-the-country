@@ -17,7 +17,7 @@ This section provides an navigation buttons to the game and description.
     - JavaScript was used for interaction
 
 ### Frameworks
-- materializecss framwork for styling
+- [materializecss](https://materializecss.com/) framwork for styling
 
 ### Others
     - Gitpod was used for the version control of the website.
@@ -31,30 +31,25 @@ This section provides an navigation buttons to the game and description.
     - Chrome-Del-Tools For debugging the project.
     - W3C HTML Validator Used for validating the HTML.
 
-### Design
-    - The colors ⬜, ⬛ was used in the background because it is very comfortable for   - the eyes. Other colors were used as well as 🟩, 🟥
+## Design
+    - The colors ⬜, ⬛ was used in the background.
+    - Other colors were used as well as 🟩, 🟥
 
-Accessability
+## Accessability
 I confirmed that the colors and fonts are clear for the users, by running it through the lighthouse in divtools.
 
-Testing
-Manually testing
+## Testing
+### Manually testing
 I tested my project in three different browsers (Chrome, Edge and Firefox) and the results were satisfying. Chrome
 
 The game was tested on different screen sizes (laptop screens, desktop screens, tablet screens and phone screens) and I was content with the results here as well.
 
 The game is easy to use and play, the header and "About the game" are easy to understand for the user, even the game itself is very simple to understand.
 
-Lighthouse
+### Lighthouse
 
 
-
-
-
-
-
-
-Validator Testing
+### Validator Testing
 HTML
 No errors were returned when passing through the official W3C validator.  I kept the warning for UX reasons.   
 
@@ -66,15 +61,13 @@ JavaScript
 
 
 
-Unfixed Bugs
-At the end of the tic tac game, the scoring area will show you the result before the last X or O is added to the panel.
+## Unfixed Bugs
 
-In the end of the dice game, the scoring area will show you the result after 14 points, instead of 15 points.
 
-Deployment
+## Deployment
 The site was deployed to GitHub pages through the following steps: In the GitHub repository, navigate to the Settings tab From the source section drop-down menu, select the main Once the main has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. The live link is here Game.
 
-Credits
+## Credits
 Content
 Websits were used in coding the game
 
