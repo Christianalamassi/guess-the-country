@@ -38,7 +38,7 @@ const imageFilenames = [
     'mexico3.jpg','burma0.jpg','burma1.jpg','moldova0.jpg','moldova1.jpg','moldova2.jpg','mongolia0.jpeg',
     'mongolia1.webp','mongolia2.jpeg','mongolia3.jpeg','montenegro0.jpg','montenegro1.jpg','montenegro2.jpg',
     'morocco0.jpg','morocco1.jpg','morocco2.jpeg','mozambique0.jpg','mozambique1.jpg','mozambique2.jpg',
-    'namibia0.jpg','namibia1.jpg','natherland0.jpg','natherland1.jpeg','natherland2.jpeg','new zealand0.jpg',
+    'namibia0.jpg','namibia1.jpg','netherland0.jpg','netherland1.jpeg','netherland2.jpeg','new zealand0.jpg',
     'new zealand1.jpg','niger0.jpg','north korea0.jpg','north korea1.jpg','north korea2.jpg',
     'north korea3.jpg','norway0.jpg','norway1.jpg','norway2.jpeg','norway3.jpg','pakistan0.jpg','paraguay0.jpg',
     'paraguay1.jpg','philippines0.jpeg','philippines1.jpeg','philippines2.jpg','philippines3.jpg','poland0.jpg',
