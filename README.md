@@ -47,7 +47,9 @@ I tested my project in three different browsers (Chrome and Opra) and the result
 The game was tested on different screen sizes (laptop screens, desktop screens, tablet screens and phone screens) and I was content with the results here as well.
 
 ### Lighthouse
-
+<img src="/assets/readme.images/lha.png">
+<img src="/assets/readme.images/lhb.png">
+<img src="/assets/readme.images/lhc.png">
 
 ### Validator Testing
 HTML
